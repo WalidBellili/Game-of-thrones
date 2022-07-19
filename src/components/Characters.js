@@ -15,6 +15,7 @@ class Character extends React.Component {
           <p>{this.props.name}</p>
 
           <p>{this.props.title}</p>
+          <button onClick={this.props.onClick}>BTN</button>
         </div>
       </div>
     );

@@ -6,6 +6,7 @@ class App extends React.Component {
     super();
     this.state = {
       characters: [],
+      favorites: [],
     };
   }
 
@@ -18,8 +19,13 @@ class App extends React.Component {
       characters: response,
     });
   }
+  handleFavoriteClick = () => {
+    this.setState({
+      favorites: this.state,
+    });
+  };
   render() {
-    console.log(this.state);
+    console.log(this.state.f);
     return (
       <div className="d-flex flex-wrap align-items-center justify-content-center mb-3 text-center">
         <h1>Game of thrones</h1>;
@@ -29,6 +35,7 @@ class App extends React.Component {
               name={character.fullName}
               title={character.title}
               image={character.imageUrl}
+              onClick={this.handleFavoriteClick}
             />
           );
         })}
