@@ -11,9 +11,11 @@ const Card = ({ character }) => {
       favoriteIds = JSON.parse(stringyfiedFavoritesIds);
     }
 
-    favoriteIds.push(character.id);
-    stringyfiedFavoritesIds = JSON.stringify(favoriteIds);
-    localStorage.setItem("favoriteIds", stringyfiedFavoritesIds);
+    if (!favoriteIds.includes(character.id)) {
+      favoriteIds.push(character.id);
+      stringyfiedFavoritesIds = JSON.stringify(favoriteIds);
+      localStorage.setItem("favoriteIds", stringyfiedFavoritesIds);
+    }
   };
 
   return (
