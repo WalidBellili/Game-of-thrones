@@ -1,8 +1,7 @@
 import React from "react";
 
-const Favorites = ({ character }) => {
-  console.log(character);
-  return <p>{character.fullName}</p>;
+const Favorites = () => {
+  return <div></div>;
 };
 
 export default Favorites;
