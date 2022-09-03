@@ -7,10 +7,10 @@ class App extends React.Component {
     super();
     this.state = {
       characters: [],
-      favorites: [],
+      // favorites: [],
       continents: [],
-      isCharactere: false,
-      isContinent: false,
+      // isCharactere: false,
+      // isContinent: false,
     };
   }
 
