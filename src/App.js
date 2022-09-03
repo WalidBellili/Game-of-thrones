@@ -65,7 +65,7 @@ class App extends React.Component {
             id="toggle"
             className="d-flex flex-wrap gap-5 align-items-center justify-content-center"
           >
-            {characters.map((character) => {
+            {/* {characters.map((character) => {
               const { fullName, title, imageUrl } = character;
 
               return (
@@ -79,7 +79,7 @@ class App extends React.Component {
             })}
             {continents.map((continent) => {
               return <Continents continent={continent.name} />;
-            })}
+            })} */}
           </div>
         </div>
       </div>
