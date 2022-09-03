@@ -1,15 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
 
-const Favorites = () => {
-  useEffect(() => {
-    fetchCharactersFavorite();
-  }, []);
-  const fetchCharactersFavorite = () => {
-    const stringifiedFavoriteIds = localStorage.getItem("favoriteIds");
-    console.log(stringifiedFavoriteIds);
-  };
-  return <div></div>;
+const Favorites = ({ character }) => {
+  console.log(character);
+  return <p>{character.fullName}</p>;
 };
 
 export default Favorites;
