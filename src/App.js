@@ -49,8 +49,8 @@ class App extends React.Component {
 
   render() {
     // console.log(this.state.characters);
-    const { characters, favorites, continents, isCharactere, isContinent } =
-      this.state;
+    // const { characters, favorites, continents, isCharactere, isContinent } =
+    //   this.state;
     // console.log(continents);
 
     return (
