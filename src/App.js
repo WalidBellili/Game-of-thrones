@@ -6,9 +6,9 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      characters: [],
+      // characters: [],
       // favorites: [],
-      continents: [],
+      // continents: [],
       // isCharactere: false,
       // isContinent: false,
     };
