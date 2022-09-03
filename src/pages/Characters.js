@@ -15,11 +15,11 @@ const Characters = () => {
     <p>Loading...</p>;
   }
   return (
-    <>
+    <main>
       {characters.map((character) => {
         return <Card character={character} />;
       })}
-    </>
+    </main>
   );
 };
 
