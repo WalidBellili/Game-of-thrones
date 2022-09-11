@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "../components/Card";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -12,7 +13,13 @@ const Home = () => {
     setCharacters(response);
   };
   console.log(characters);
-  return <div></div>;
+  return (
+    <>
+      {characters.map((character) => {
+        return <Card character={character} />;
+      })}
+    </>
+  );
 };
 
 export default Home;
