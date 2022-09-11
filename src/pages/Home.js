@@ -14,12 +14,14 @@ const Home = () => {
   };
 
   return (
-    <>
+    <main>
       <h1>Game of Throne</h1>
-      {characters.map((character) => {
-        return <Card character={character} />;
-      })}
-    </>
+      <article className="cardContainer">
+        {characters.map((character) => {
+          return <Card character={character} />;
+        })}
+      </article>
+    </main>
   );
 };
 
