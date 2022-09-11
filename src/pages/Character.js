@@ -1,26 +1,27 @@
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 
-const Home = () => {
+const Character = () => {
   const [characters, setCharacters] = useState([]);
+  const params = useParams();
   useEffect(() => {
     fetchCharacters();
   }, []);
 
   const fetchCharacters = async () => {
-    const request = await fetch(`https://thronesapi.com/api/v2/Characters`);
+    const request = await fetch(
+      `https://thronesapi.com/api/v2/Characters/${params.id}`
+    );
     const response = await request.json();
     setCharacters(response);
   };
-
+  console.log(characters);
   return (
     <>
-      <h1>Game of Throne</h1>
-      {characters.map((character) => {
-        return <Card character={character} />;
-      })}
+      <Card character={characters} />
     </>
   );
 };
 
-export default Home;
+export default Character;

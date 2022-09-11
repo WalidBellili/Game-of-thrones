@@ -1,8 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({ character }) => {
   console.log(character);
-  return <div></div>;
+  return (
+    <>
+      <Link to={`/character/${character.id}`}>
+        <img src={character.imageUrl} alt={character.fullName} />
+        <p>{`${character.firstName} ${character.lastName}`}</p>
+      </Link>
+    </>
+  );
 };
 
 export default Card;
